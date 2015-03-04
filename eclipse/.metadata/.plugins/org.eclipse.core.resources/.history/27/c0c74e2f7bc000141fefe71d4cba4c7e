@@ -1,0 +1,27 @@
+package ca.robotnick.armour;
+
+@Mod(modid = rpgMod.MODID, version = rpgMOD.version);
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+	public class rpgCraft {
+
+		public static final String MODID = "rpgMod";
+		public static final String VERSION = "1.0";
+		
+	    public static Item soul;
+
+	    @EventHandler
+	    public static final void preInit(FMLInitializationEvent event) {
+	        soul = new ItemSoul();
+	        GameRegistry.registerItem(soul, "Soul");
+	    }
+	    
+	    @EventHandler
+	    public static final void Init(FMLInitializationEvent event) {
+	    	
+	    }
+}
